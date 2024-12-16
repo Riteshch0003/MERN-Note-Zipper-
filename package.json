@@ -2,15 +2,22 @@
   "name": "mernfullstackdevelopment",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-    "start": "nodemon backend/server.js"
+   "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run start --prefix frontend\"",
+    "start": "npm run dev", 
+    "client": "npm run start --prefix frontend",
+    "server": "npm run dev --prefix backend"
   },
   "author": "ritesh",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
   }
 }
