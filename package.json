@@ -2,6 +2,7 @@
   "name": "mernfullstackdevelopment",
   "version": "1.0.0",
   "main": "server.js",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
